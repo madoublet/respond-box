@@ -7,14 +7,14 @@ wget --content-disposition https://github.com/madoublet/respond/blob/master/dist
 
 # Unzip
 echo "Unzipping to /var/www"
-unzip release.zip -d /var/www
+unzip -o release.zip -d /var/www
 
 # Create sites
 echo "Creating sites and resources folders"
 mkdir public/sites
-mkdir public/resources
+mkdir resources/sites
 chown -R www-data public/sites
-chown -R www-data public/resources
+chown -R www-data resources/sites
 chown -R www-data storage
 
 # Copy .env
